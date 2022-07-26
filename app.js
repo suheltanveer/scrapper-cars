@@ -5,7 +5,7 @@ const cheerio = require("cheerio");
 const fs = require("fs");
 
 // URL of the page we want to scrape
-const url = "https://www.cardekho.com/newcars";
+const url = "";
 
 // Async function which scrapes the data
 async function scrapeWebpageForData() {
@@ -25,6 +25,7 @@ async function scrapeWebpageForData() {
       // Select the text content of a and span elements
       // Store the textcontent in the above object
       carBrand.name = $(el).text();
+
       // Populate car brands array with country data
       carBrands.push(carBrand);
     });
